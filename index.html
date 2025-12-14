@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7 - Frontend Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #2e2f42;
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            color: #808080;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        .projects-list {
+            list-style: none;
+            display: grid;
+            gap: 20px;
+        }
+
+        .project-item {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .project-item:hover {
+            background: #e8e8e8;
+            border-color: #4e75ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: #2e2f42;
+            display: block;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #4e75ff;
+        }
+
+        .project-description {
+            color: #808080;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #808080;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Lab 7 - Frontend Projects</h1>
+        <p class="subtitle">Набір завдань з фронтенд розробки</p>
+
+        <ul class="projects-list">
+            <li class="project-item">
+                <a href="gallery.html" class="project-link">
+                    <div class="project-title">📸 Галерея зображень</div>
+                    <div class="project-description">
+                        Галерея зображень з модальним вікном. Використовує basicLightbox для відображення великих зображень.
+                    </div>
+                </a>
+            </li>
+
+            <li class="project-item">
+                <a href="1-timer.html" class="project-link">
+                    <div class="project-title">⏱️ Таймер зворотного відліку</div>
+                    <div class="project-description">
+                        Таймер зворотного відліку до певної дати. Використовує flatpickr для вибору дати та iziToast для повідомлень.
+                    </div>
+                </a>
+            </li>
+
+            <li class="project-item">
+                <a href="2-form.html" class="project-link">
+                    <div class="project-title">📝 Форма зворотного зв'язку</div>
+                    <div class="project-description">
+                        Форма з автоматичним збереженням даних у localStorage. Дані відновлюються при оновленні сторінки.
+                    </div>
+                </a>
+            </li>
+
+            <li class="project-item">
+                <a href="2-snackbar.html" class="project-link">
+                    <div class="project-title">⚡ Генератор промісів</div>
+                    <div class="project-description">
+                        Генератор промісів з можливістю вибору стану (fulfilled/rejected) та затримки. Використовує iziToast.
+                    </div>
+                </a>
+            </li>
+
+            <li class="project-item">
+                <a href="3-image-search.html" class="project-link">
+                    <div class="project-title">🔍 Пошук зображень</div>
+                    <div class="project-description">
+                        Пошук зображень через Pixabay API. Використовує SimpleLightbox для галереї та iziToast для повідомлень.
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="footer">
+            <p>Створено для Lab 7 - Frontend Development</p>
+        </div>
+    </div>
+</body>
+</html>
