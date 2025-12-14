@@ -105,6 +105,231 @@
         .link-button:hover {
             background: #8a5fb8;
         }
+
+        .report-toggle {
+            background: #4e75ff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .report-toggle:hover {
+            background: #6c8cff;
+        }
+
+        .report-section {
+            display: none;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 3px solid #e0e0e0;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .report-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .report-content {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 20px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        #reportFrame {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .report-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .report-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .report-content::-webkit-scrollbar-thumb {
+            background: #4e75ff;
+            border-radius: 4px;
+        }
+
+        .report-content::-webkit-scrollbar-thumb:hover {
+            background: #6c8cff;
+        }
+
+        .report-content section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #4e75ff;
+        }
+
+        .report-content h2 {
+            color: #4e75ff;
+            font-size: 24px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .report-content h3 {
+            color: #2e2f42;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        .report-content h4 {
+            color: #4e75ff;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        .report-content p {
+            margin-bottom: 12px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        .report-content ul, .report-content ol {
+            margin-left: 25px;
+            margin-bottom: 12px;
+        }
+
+        .report-content li {
+            margin-bottom: 6px;
+        }
+
+        .task-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .task-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4e75ff;
+            margin-bottom: 10px;
+        }
+
+        .task-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .task-features {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .task-features li:before {
+            content: "✓ ";
+            color: #4e75ff;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .tech-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            text-align: center;
+        }
+
+        .tech-item strong {
+            color: #4e75ff;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .file-structure {
+            background: #2e2f42;
+            color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #d63384;
+        }
+
+        .report-content pre {
+            background: #2e2f42;
+            color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .report-content pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        .report-content .link-button {
+            background: #4e75ff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+            transition: background 0.3s ease;
+        }
+
+        .report-content .link-button:hover {
+            background: #6c8cff;
+        }
     </style>
 </head>
 <body>
@@ -161,10 +386,41 @@
 
         <div class="footer">
             <p>Створено для Lab 7 - Frontend Development</p>
-            <p style="margin-top: 20px;">
-                <a href="report.html" class="link-button" style="background: #764ba2; text-decoration: none; color: white; padding: 12px 24px; border-radius: 8px; display: inline-block;">📊 Переглянути звіт</a>
-            </p>
+            <button class="report-toggle" id="reportToggle">📊 Показати звіт</button>
+        </div>
+
+        <div class="report-section" id="reportSection">
+            <h2 style="color: #4e75ff; text-align: center; margin-bottom: 20px;">📊 Звіт до Lab 7</h2>
+            <iframe 
+                id="reportFrame" 
+                src="report.html" 
+                style="width: 100%; height: 80vh; border: none; border-radius: 12px; background: white;"
+                title="Звіт до Lab 7">
+            </iframe>
         </div>
     </div>
+
+    <script>
+        const reportToggle = document.getElementById('reportToggle');
+        const reportSection = document.getElementById('reportSection');
+        const reportFrame = document.getElementById('reportFrame');
+
+        reportToggle.addEventListener('click', () => {
+            if (reportSection.classList.contains('active')) {
+                // Закрити звіт
+                reportSection.classList.remove('active');
+                reportToggle.textContent = '📊 Показати звіт';
+            } else {
+                // Показати звіт
+                reportSection.classList.add('active');
+                reportToggle.textContent = '📊 Сховати звіт';
+                
+                // Прокрутити до звіту
+                setTimeout(() => {
+                    reportSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        });
+    </script>
 </body>
 </html>
