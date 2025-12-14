@@ -125,3 +125,7 @@ startButton.addEventListener('click', () => {
   timerInterval = setInterval(updateTimer, 1000);
 });
 
+
+
+
+
